@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+
+    haproxy:
+        image: haproxytech/haproxy-alpine:2.7
+        container_name: haproxy
+        ports:
+            - 8080:80
+            - 8404:8404
+        volumes:
+            - ./conf:/usr/local/etc/haproxy:ro
+
+    web1:
+        image: jmalloc/echo-server:latest
+        expose:
+            - 8080
+
+    web2:
+        image: jmalloc/echo-server:latest
+        expose:
+            - 8080
+
+    web3:
+        image: jmalloc/echo-server:latest
+        expose:
+            - 8080
