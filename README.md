@@ -2,7 +2,7 @@
 
 Example of HAProxy implementation with Docker. Serving web servers.
 
-HAProxy allows performing load-balancing actions to avoid SPF (single points of failure).
+HAProxy allows performing load-balancing actions to avoid SPOF (single points of failure).
 
 ## Start
 
